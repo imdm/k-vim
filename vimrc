@@ -1,11 +1,11 @@
 "==========================================
-" Author:  wklken
+" Author:  Milo
 " Version: 9.1
-" Email: wklken@yeah.net
+" Email: dingmeng351@gmail.com
 " BlogPost: http://www.wklken.me
 " ReadMe: README.md
 " Donation: http://www.wklken.me/pages/donation.html
-" Last_modify: 2015-12-15
+" Last_modify: 2020-04-22
 " Sections:
 "       -> Initial Plugin 加载插件
 "       -> General Settings 基础设置
@@ -48,11 +48,9 @@ filetype plugin indent on
 "==========================================
 
 
-" history存储容量
-set history=2000
 
-" 检测文件类型
-filetype on
+set history=2000                        " history存储容量
+filetype on " 检测文件类型
 " 针对不同的文件类型采用不同的缩进格式
 filetype indent on
 " 允许插件
@@ -70,10 +68,9 @@ set shortmess=atI
 "set backupext=.bak
 "set backupdir=/tmp/vimbk/
 
-" 取消备份。 视情况自己改
-set nobackup
-" 关闭交换文件
-set noswapfile
+
+set nobackup " 取消备份。 视情况自己改
+set noswapfile " 关闭交换文件
 
 
 " TODO: remove this, use gundo
@@ -94,7 +91,7 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
 " 突出显示当前列
 set cursorcolumn
 " 突出显示当前行
-set cursorline
+" set cursorline
 
 
 " 设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制, 不需要可以去掉
@@ -135,33 +132,20 @@ set whichwrap+=<,>,h,l
 "==========================================
 " Display Settings 展示/排版等界面格式设置
 "==========================================
-
-" 显示当前的行号列号
-set ruler
-" 在状态栏显示正在输入的命令
-set showcmd
-" 左下角显示当前vim模式
-set showmode
-
-" 在上下移动光标时，光标的上方或下方至少会保留显示的行数
-set scrolloff=7
-
+set ruler               " 显示当前的行号列号
+set showcmd             " 在状态栏显示正在输入的命令
+set showmode            " 左下角显示当前vim模式
+set scrolloff=7         " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
 " set winwidth=79
-
 " 命令行（在状态行下）的高度，默认为1，这里是2
 set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
 " Always show the status line - use 2 lines for the status bar
 set laststatus=2
+set number              " 显示行号
+set nowrap              " 取消换行
+set showmatch           " 括号配对情况, 跳转并高亮一下匹配的括号
 
-" 显示行号
-set number
-" 取消换行
-set nowrap
-
-" 括号配对情况, 跳转并高亮一下匹配的括号
-set showmatch
-" How many tenths of a second to blink when matching brackets
-set matchtime=2
+set matchtime=2         " How many tenths of a second to blink when matching brackets
 
 
 " 设置文内智能搜索提示
@@ -657,7 +641,9 @@ endif
 set background=dark
 set t_Co=256
 
-colorscheme solarized
+" colorscheme one
+colorscheme onedark
+" colorscheme solarized
 " colorscheme molokai
 
 
